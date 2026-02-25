@@ -27,7 +27,9 @@ const Dashboard =() => {
   
   <Container maxWidth={false} sx={{ py: 4 }}>
    
-   <Box display='flex' justifyContent='space-between' alignItems='center' mb={2}>
+   <Box sx={{display: 'flex', flexDirection: {xs:'column', md:'row'},
+        justifyContent:'space-between',alignItems:{xs: 'flex-start',md:'center'},
+        gap:2, mb:2 }}>
     <Typography variant="h5">Dashboard</Typography>
     <Typography variant="h6">{user?.email}</Typography>
      <Button variant='outlined' color='error' onClick={handleLogout}>
